@@ -4,7 +4,7 @@
       <h1 class="text-center">Galeria de productos</h1>
     </header>
 
-    <main class="container">
+    <main class="container py-5">
 
       <section class="row justify-content-center g-3">
 
@@ -19,7 +19,7 @@
 
               <div>
                   <button
-                      class="btn btn-primary"
+                      class="btn"
                       data-bs-toggle="modal"
                       data-bs-target="#miModal"
                       :data-producto-id="producto.id"
@@ -58,7 +58,7 @@
                       ></button>
                   </div>
                   <div class="modal-body">
-                    <img :src="currentProducto.pathImg" :alt="currentProducto.nombre" width="80">
+                    <img :src="currentProducto.pathImg" :alt="currentProducto.nombre" width="100">
                       <p>
                           <span>Descripción: </span
                           >{{ currentProducto.descripcionLarga }}
@@ -67,7 +67,7 @@
                   <div class="modal-footer">
                       <button
                           type="button"
-                          class="btn btn-secondary"
+                          class="btn"
                           data-bs-dismiss="modal"
                       >
                           Close
@@ -135,5 +135,8 @@ export default {
 <style>
 .btn{
     background-color:rgb(129, 126, 129)
+}
+body{
+    font-family: "Caveat", cursive;
 }
 </style>
